@@ -1,0 +1,73 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===== Virtual environments =====
+venv/
+.venv/
+env/
+ENV/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===== Environment / secrets =====
+.env
+.env.local
+*.key
+*.pem
+config/secrets.yaml
+
+# ===== ML model artifacts (usually too large for git — track via releases/DVC/Git LFS instead) =====
+*.pt
+*.pth
+*.h5
+*.pkl
+*.joblib
+*.onnx
+checkpoints/
+models/*.bin
+runs/
+wandb/
+mlruns/
+
+# ===== Data (raw/large data shouldn't live in git — see README for data sourcing) =====
+data/raw/
+data/external/
+*.zip
+*.tar.gz
+
+# NOTE: training_data.csv, labels_schema.json, oisd_corpus.json, oisd_index.csv
+# are intentionally NOT ignored — they're small, curated, and core to this repo.
+# Only ignore large/raw/regenerable bulk data (e.g. the full ~65-case PDF corpus
+# if downloaded locally) below:
+data/oisd_pdfs/
+*.pdf
+
+# ===== OS / editor junk =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Node (if building a web/React frontend) =====
+node_modules/
+dist/
+.next/
+build/
+
+# ===== Streamlit / demo app caches =====
+.streamlit/

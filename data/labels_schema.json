@@ -1,0 +1,462 @@
+{
+  "schema_name": "SIH26165_SIF_Precursor_Taxonomy",
+  "version": "1.0",
+  "description": "Collapsed 6-category classification taxonomy for the SIF precursor detection model, with the original 11 fine-grained sub-tags nested underneath for explainability/display. Collapsing from 11 to 6 top-level classes addresses training-data sparsity (12 source cases cannot reliably support 11 independent classes) while preserving all original evidence via sub-tags.",
+  "source_corpus": "12 OISD case studies (see /mnt/user-data/outputs/training_data.csv for the underlying 75 precursor-text rows)",
+  "case_reference": {
+    "Case 1": {
+      "oisd_id": "OISD/CS/2025-26/E&P/04",
+      "title": "Fatal accident during laying down of Drill Pipe on Catwalk through V-door",
+      "severity": "Fatality (floorman)"
+    },
+    "Case 2": {
+      "oisd_id": "OISD/CS/2025-26/E&P/05",
+      "title": "Fatal Accident at Workover Rig (Monkey board fall)",
+      "severity": "One fatality"
+    },
+    "Case 3": {
+      "oisd_id": "OISD/CS/2026-27/E&P/06",
+      "title": "HVAC fire in machinery deck",
+      "severity": "Financial loss (no injury)"
+    },
+    "Case 4": {
+      "oisd_id": "OISD/CS/2026-27/E&P/09",
+      "title": "Major incident at a GGS",
+      "severity": "Loss of vision (contractual worker)"
+    },
+    "Case 5": {
+      "oisd_id": "OISD/CS/2025-26/E&P/13",
+      "title": "Blowout after well perforation",
+      "severity": "Blowout (no fire/injury)"
+    },
+    "Case 6": {
+      "oisd_id": "OISD/CS/2025-26/E&P/14",
+      "title": "Fatal accident caused by tubing drop after elevator unlatched at monkey board",
+      "severity": "Fatality + critical injury"
+    },
+    "Case 7": {
+      "oisd_id": "OISD/CS/2025-26/E&P/18",
+      "title": "Man Overboard (MOB) at offshore unmanned platform",
+      "severity": "Loss of life (missing)"
+    },
+    "Case 8": {
+      "oisd_id": "OISD/CS/2025-26/E&P/19",
+      "title": "Fatal Accident during dismantling of Drilling Rig",
+      "severity": "Fatal accident"
+    },
+    "Case 9": {
+      "oisd_id": "OISD/CS/2025-26/E&P/21",
+      "title": "Gas blowout incident at Workover Rig",
+      "severity": "Blowout (no injuries/fire)"
+    },
+    "Case 10": {
+      "oisd_id": "OISD/CS/2025-26/PL/03",
+      "title": "Oil Pipeline leakage Incident in an Offshore Pipeline",
+      "severity": "Loss of crude oil (382 KL)"
+    },
+    "Case 11": {
+      "oisd_id": "OISD/CS/2024-25/PL/07",
+      "title": "Fatal incident in Pipeline ROW during excavation for TLP cable repair",
+      "severity": "One fatality"
+    },
+    "Case 12": {
+      "oisd_id": "OISD/CS/2025-26/PL/16",
+      "title": "Pipeline failure incidents due to heavy rainfall/flash floods (Monsoon 2025)",
+      "severity": "Product loss / pipeline replacement cost"
+    }
+  },
+  "top_level_classes": [
+    {
+      "class_id": "C1",
+      "class_name": "Training & Competency Gaps",
+      "description": "Personnel operating without adequate hands-on training, valid/verifiable certification, induction on transfer, or demonstrated competency matching their certified level.",
+      "case_coverage_count": 6,
+      "sub_tags": [
+        {
+          "sub_tag_id": "C1-S1",
+          "sub_tag_name": "Inadequate Training and Competency",
+          "description": "Missing hands-on training, unapproved/unverifiable certifications, or certified competency not matching demonstrated knowledge.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 2",
+              "oisd_id": "OISD/CS/2025-26/E&P/05",
+              "evidence": "Victim recently approved as Topman but had received no hands-on training on safety gear, hazard spotting, or emergency response."
+            },
+            {
+              "case_id": "Case 3",
+              "oisd_id": "OISD/CS/2026-27/E&P/06",
+              "evidence": "No structured training module existed for electrical crew on AHU/compressor maintenance and troubleshooting."
+            },
+            {
+              "case_id": "Case 4",
+              "oisd_id": "OISD/CS/2026-27/E&P/09",
+              "evidence": "All workers performing high-pressure gasket replacement were in the 'unskilled' category."
+            },
+            {
+              "case_id": "Case 5",
+              "oisd_id": "OISD/CS/2025-26/E&P/13",
+              "evidence": "Key personnel held valid well control certificates, but demonstrated knowledge did not match the certificate level; recently transferred managers had no induction/orientation."
+            },
+            {
+              "case_id": "Case 7",
+              "oisd_id": "OISD/CS/2025-26/E&P/18",
+              "evidence": "BOSIET training undertaken by contractual employees was not approved by the Directorate General of Shipping (DGS)."
+            },
+            {
+              "case_id": "Case 8",
+              "oisd_id": "OISD/CS/2025-26/E&P/19",
+              "evidence": "Crew members other than the Driller had no prior experience with the rig's dismantling procedure; structured safety training was not consistently conducted."
+            }
+          ],
+          "case_count": 6
+        }
+      ]
+    },
+    {
+      "class_id": "C2",
+      "class_name": "Supervision & Communication Breakdown",
+      "description": "Absent, disengaged, or uncoordinated supervisory oversight, and failures in transferring critical operational status information between crew members or roles during active tasks.",
+      "case_coverage_count": 7,
+      "sub_tags": [
+        {
+          "sub_tag_id": "C2-S1",
+          "sub_tag_name": "Deficient Supervision and Leadership",
+          "description": "No mentor/supervisor assigned, or all key supervisory personnel simultaneously absent during a critical or high-risk job.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 1",
+              "oisd_id": "OISD/CS/2025-26/E&P/04",
+              "evidence": "OIM and authorized representatives failed to review and verify Category III inspection reports, allowing critical deficiencies to go unnoticed."
+            },
+            {
+              "case_id": "Case 2",
+              "oisd_id": "OISD/CS/2025-26/E&P/05",
+              "evidence": "No mentor or supervisor was assigned to provide on-the-job guidance to the newly approved topman."
+            },
+            {
+              "case_id": "Case 4",
+              "oisd_id": "OISD/CS/2026-27/E&P/09",
+              "evidence": "Deficient leadership and lack of supervision over a highly pressurized gasket-replacement activity."
+            },
+            {
+              "case_id": "Case 8",
+              "oisd_id": "OISD/CS/2025-26/E&P/19",
+              "evidence": "Installation Manager, HSE Engineer, Rig Superintendent, Rig Manager, and HSE Advisor were ALL absent from the site simultaneously during the critical job."
+            },
+            {
+              "case_id": "Case 11",
+              "oisd_id": "OISD/CS/2024-25/PL/07",
+              "evidence": "Deep excavation in restricted conditions was carried out as an entirely unsupervised activity."
+            }
+          ],
+          "case_count": 5
+        },
+        {
+          "sub_tag_id": "C2-S2",
+          "sub_tag_name": "Communication Breakdowns and Coordination Gaps",
+          "description": "Critical operational status not relayed between crew roles (floor-to-topman, signalman-to-crane-operator, contractor-to-owner), leading to premature or uncoordinated actions.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 6",
+              "oisd_id": "OISD/CS/2025-26/E&P/14",
+              "evidence": "Placement of the pin end on the incline ramp at the V-door was not conveyed to the topman, who unlatched the elevator while unaware of rig floor activity."
+            },
+            {
+              "case_id": "Case 8",
+              "oisd_id": "OISD/CS/2025-26/E&P/19",
+              "evidence": "Communication gap between signalman and crane operator regarding sling tensioning; each gave a conflicting account of whether a signal was given."
+            },
+            {
+              "case_id": "Case 11",
+              "oisd_id": "OISD/CS/2024-25/PL/07",
+              "evidence": "Mainline contractor executed mechanized excavation without informing the pipeline owner; permit system failed to record the authorized supervisor's name; no post-incident coordination with local police."
+            }
+          ],
+          "case_count": 3
+        }
+      ]
+    },
+    {
+      "class_id": "C3",
+      "class_name": "Maintenance & Inspection Failures",
+      "description": "Skipped or superficial OEM/statutory inspections, missing calibration/test records, non-standard component substitution, and resulting undetected mechanical or structural degradation.",
+      "case_coverage_count": 7,
+      "sub_tags": [
+        {
+          "sub_tag_id": "C3-S1",
+          "sub_tag_name": "Substandard Maintenance and Inspection Practices",
+          "description": "OEM-recommended inspections skipped or incomplete; non-standard components used in place of specified parts; calibration/integrity testing records missing.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 1",
+              "oisd_id": "OISD/CS/2025-26/E&P/04",
+              "evidence": "No evidence of Category II inspection; Category III reports missing core dimensional checks; OEM latch pin replaced with an undersized, loose 6mm cotter pin."
+            },
+            {
+              "case_id": "Case 3",
+              "oisd_id": "OISD/CS/2026-27/E&P/06",
+              "evidence": "No written OEM monthly inspection guidelines; no calibration records for low/high-pressure switches."
+            },
+            {
+              "case_id": "Case 6",
+              "oisd_id": "OISD/CS/2025-26/E&P/14",
+              "evidence": "Inadequate daily checklist verification of the twin stop device, allowing it to remain bypassed/unset."
+            },
+            {
+              "case_id": "Case 7",
+              "oisd_id": "OISD/CS/2025-26/E&P/18",
+              "evidence": "Railings/handrails attached by non-standard method, with rusted or cracked mounting bases."
+            },
+            {
+              "case_id": "Case 8",
+              "oisd_id": "OISD/CS/2025-26/E&P/19",
+              "evidence": "No periodic inspection report was available for the ratchet boomer, which had pre-existing damage."
+            },
+            {
+              "case_id": "Case 10",
+              "oisd_id": "OISD/CS/2025-26/PL/03",
+              "evidence": "Pigging and inline inspection were never conducted since commissioning due to wax buildup."
+            }
+          ],
+          "case_count": 6
+        },
+        {
+          "sub_tag_id": "C3-S2",
+          "sub_tag_name": "Mechanical Failure and Structural Defects",
+          "description": "Sudden or progressive physical/structural failure of load-bearing or safety-critical hardware, often the direct trigger event following an undetected maintenance gap.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 1",
+              "oisd_id": "OISD/CS/2025-26/E&P/04",
+              "evidence": "Elevator unlatched due to a rusted, broken latch spring combined with an undersized, loose cotter pin."
+            },
+            {
+              "case_id": "Case 3",
+              "oisd_id": "OISD/CS/2026-27/E&P/06",
+              "evidence": "Dislodgement/snapping of HVAC compressor terminals sprayed compressor oil onto live terminals, causing an explosion."
+            },
+            {
+              "case_id": "Case 7",
+              "oisd_id": "OISD/CS/2025-26/E&P/18",
+              "evidence": "Mezzanine deck handrail failed structurally under the worker's weight due to weak base material (rusted weld / cracked composite)."
+            },
+            {
+              "case_id": "Case 8",
+              "oisd_id": "OISD/CS/2025-26/E&P/19",
+              "evidence": "Ratchet boomer's hook section detached during loosening, due to excessive tension or pre-existing damage."
+            }
+          ],
+          "case_count": 4
+        }
+      ]
+    },
+    {
+      "class_id": "C4",
+      "class_name": "Procedure, Permit & Risk-Assessment Bypass",
+      "description": "Work executed without required Work Permit/JSA/Toolbox Talk coverage, planning that ignores available historical/offset data, known unsafe conditions tolerated without correction, and identified corrective actions delayed past a reasonable window.",
+      "case_coverage_count": 10,
+      "sub_tags": [
+        {
+          "sub_tag_id": "C4-S1",
+          "sub_tag_name": "Flawed Risk Assessment and Operational Planning",
+          "description": "Job Safety Analysis (JSA) or well/operational plans omit known hazards, ignore offset-well or historical data, or the job proceeds outside a validated safe operating envelope (e.g. pressure limits).",
+          "supporting_cases": [
+            {
+              "case_id": "Case 2",
+              "oisd_id": "OISD/CS/2025-26/E&P/05",
+              "evidence": "Oil-contaminated, slippery surfaces were not identified or addressed in the JSA or Toolbox Talk."
+            },
+            {
+              "case_id": "Case 3",
+              "oisd_id": "OISD/CS/2026-27/E&P/06",
+              "evidence": "Inadequate hazard identification/risk assessment; compressor explosion hazard not included in the rig risk register."
+            },
+            {
+              "case_id": "Case 4",
+              "oisd_id": "OISD/CS/2026-27/E&P/09",
+              "evidence": "Work on a pressurized flange performed without a Work Permit, JSA, or Toolbox Talk."
+            },
+            {
+              "case_id": "Case 5",
+              "oisd_id": "OISD/CS/2025-26/E&P/13",
+              "evidence": "Well planning predicted an oil-bearing formation and omitted a Blind Shear Ram, ignoring offset-well and prior-workover gas-influx data."
+            },
+            {
+              "case_id": "Case 8",
+              "oisd_id": "OISD/CS/2025-26/E&P/19",
+              "evidence": "JSA did not include steps for un-securing the travelling block or for safe harness anchoring locations."
+            },
+            {
+              "case_id": "Case 9",
+              "oisd_id": "OISD/CS/2025-26/E&P/21",
+              "evidence": "Workover plan assumed oil sand per a GTO while ignoring gas shows seen during actual drilling and at a reference offset well."
+            },
+            {
+              "case_id": "Case 10",
+              "oisd_id": "OISD/CS/2025-26/PL/03",
+              "evidence": "Pipeline continued running above safe operating pressure for over a year after an MTM survey flagged ERF>1 anomalies."
+            },
+            {
+              "case_id": "Case 11",
+              "oisd_id": "OISD/CS/2024-25/PL/07",
+              "evidence": "Excavation to 3.7m depth carried out without considering/mitigating hazards from nearby buildings, deep-rooted trees, and pipeline proximity."
+            },
+            {
+              "case_id": "Case 12",
+              "oisd_id": "OISD/CS/2025-26/PL/16",
+              "evidence": "Assumptions regarding parallel-pipeline washout safety were flawed; open-cut river crossings selected without designing for adequate trench depth or pipe thickness once HDD proved unfeasible."
+            }
+          ],
+          "case_count": 9
+        },
+        {
+          "sub_tag_id": "C4-S2",
+          "sub_tag_name": "Weak Safety Culture and Non-Adherence to Procedures",
+          "description": "Hazard-reporting systems treated as a formality, obvious hazards tolerated without action, personal devices used during critical operations, or task-specific PPE/procedure bypassed by habit.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 1",
+              "oisd_id": "OISD/CS/2025-26/E&P/04",
+              "evidence": "Unsafe rig conditions went unreported by the crew; reporting procedure treated as a mere formality rather than adopted with genuine intent."
+            },
+            {
+              "case_id": "Case 2",
+              "oisd_id": "OISD/CS/2025-26/E&P/05",
+              "evidence": "Topman failed to engage full-body harness double hooks to the ladder; climbing conducted simultaneously with tubing pull-out."
+            },
+            {
+              "case_id": "Case 4",
+              "oisd_id": "OISD/CS/2026-27/E&P/09",
+              "evidence": "Systemic non-adherence to Permit-to-Work protocols, JSAs, and face/eye protective gear."
+            },
+            {
+              "case_id": "Case 6",
+              "oisd_id": "OISD/CS/2025-26/E&P/14",
+              "evidence": "Rig crew used mobile phones on-duty; a non-standard rope pull was used to unlatch the elevator instead of the approved method."
+            },
+            {
+              "case_id": "Case 7",
+              "oisd_id": "OISD/CS/2025-26/E&P/18",
+              "evidence": "Personnel chose not to wear mandatory work vests/lifejackets while staying on the unmanned platform."
+            }
+          ],
+          "case_count": 5
+        },
+        {
+          "sub_tag_id": "C4-S3",
+          "sub_tag_name": "Delayed Execution of Corrective Actions",
+          "description": "A permanent engineering fix (realignment, pressure de-rating, HDD reroute) is identified and planned, but administrative/logistical delay in execution leaves the known risk live until failure occurs.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 10",
+              "oisd_id": "OISD/CS/2025-26/PL/03",
+              "evidence": "Management did not execute immediate pressure reduction or corrective actions despite MTM survey identifying extreme anomalies and predicted failure risk."
+            },
+            {
+              "case_id": "Case 12",
+              "oisd_id": "OISD/CS/2025-26/PL/16",
+              "evidence": "Longer-length HDD realignment planned after known riverbank erosion, but execution delay left the pipeline operating over the vulnerable zone until failure."
+            }
+          ],
+          "case_count": 2
+        }
+      ]
+    },
+    {
+      "class_id": "C5",
+      "class_name": "Missing / Defunct Critical Safety Barriers",
+      "description": "A designated engineered safety barrier (BOP shear ram, trip tank + alarm, interlock, fire water pump, fixed suppression system) is either absent from the equipment configuration or present but non-functional/bypassed at the time of the incident.",
+      "case_coverage_count": 5,
+      "sub_tags": [
+        {
+          "sub_tag_id": "C5-S1",
+          "sub_tag_name": "Defunct or Absent Critical Safety Devices",
+          "description": "Primary or secondary engineered safety barrier missing from design/configuration, or present but disabled/non-functional at time of incident.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 3",
+              "oisd_id": "OISD/CS/2026-27/E&P/06",
+              "evidence": "Fixed fire suppression system was absent from the workshop area, hampering firefighting in poor visibility."
+            },
+            {
+              "case_id": "Case 5",
+              "oisd_id": "OISD/CS/2025-26/E&P/13",
+              "evidence": "BOP stack lacked a Blind Shear Ram; trip tank not connected, its level alarm defunct; no active well monitoring; blind ram incorrectly closed on wireline."
+            },
+            {
+              "case_id": "Case 6",
+              "oisd_id": "OISD/CS/2025-26/E&P/14",
+              "evidence": "Twin stop device failed to function/engage during the runaway descent of the travelling block, having been bypassed or left unset."
+            },
+            {
+              "case_id": "Case 9",
+              "oisd_id": "OISD/CS/2025-26/E&P/21",
+              "evidence": "BOP stack lacked a blind shear ram; trip tank kept isolated during perforation; fire water pump completely missing from site."
+            },
+            {
+              "case_id": "Case 10",
+              "oisd_id": "OISD/CS/2025-26/PL/03",
+              "evidence": "Safety instrumentation and interlocks meant to trip crude oil pumps on abrupt pressure drop malfunctioned during the leak."
+            }
+          ],
+          "case_count": 5
+        }
+      ]
+    },
+    {
+      "class_id": "C6",
+      "class_name": "Environmental & Physical Workspace Hazards",
+      "description": "External environmental forces (weather, waterway dynamics) or uncontrolled physical conditions in the immediate workspace (obstructions, spillage, combustible storage) that independently elevate risk regardless of procedural compliance.",
+      "case_coverage_count": 5,
+      "sub_tags": [
+        {
+          "sub_tag_id": "C6-S1",
+          "sub_tag_name": "Severe Environmental and Natural Hazards",
+          "description": "Weather or waterway-driven forces (monsoon, flooding, riverbank erosion/meandering) directly cause or worsen the incident, or hamper emergency response.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 7",
+              "oisd_id": "OISD/CS/2025-26/E&P/18",
+              "evidence": "Monsoon weather conditions directly hindered search-and-rescue (SAR) operations for the missing overboard worker."
+            },
+            {
+              "case_id": "Case 12",
+              "oisd_id": "OISD/CS/2025-26/PL/16",
+              "evidence": "Heavy downpours, cloudbursts, and flash floods drove river-path meandering and riverbed erosion, exerting hydrodynamic stress on exposed pipelines."
+            }
+          ],
+          "case_count": 2
+        },
+        {
+          "sub_tag_id": "C6-S2",
+          "sub_tag_name": "Hazardous Workspace Obstructions and Conditions",
+          "description": "Physical blockage of a climbing/operational path, materials obstructing visibility or access, spillage creating slip hazards, or combustible material stored in an active work area.",
+          "supporting_cases": [
+            {
+              "case_id": "Case 1",
+              "oisd_id": "OISD/CS/2025-26/E&P/04",
+              "evidence": "Materials placed on the rig floor obstructed the tugger operator's line of sight."
+            },
+            {
+              "case_id": "Case 2",
+              "oisd_id": "OISD/CS/2025-26/E&P/05",
+              "evidence": "Standpipe gooseneck and Kelly hose obstructed the monkey ladder; crude oil spillage from wet pull-out made the derrick floor and ladder slippery."
+            },
+            {
+              "case_id": "Case 3",
+              "oisd_id": "OISD/CS/2026-27/E&P/06",
+              "evidence": "Combustible glass wool duct insulation present; an overhead platform was used to store combustible mechanical spares and filters."
+            }
+          ],
+          "case_count": 3
+        }
+      ]
+    }
+  ],
+  "coverage_summary": {
+    "total_top_level_classes": 6,
+    "total_sub_tags": 11,
+    "total_unique_source_cases": 12,
+    "note": "Case coverage counts per class reflect unique cases (a case may appear under multiple sub-tags if it exhibits more than one precursor type, which is expected and realistic for multi-causal incidents)."
+  }
+}
