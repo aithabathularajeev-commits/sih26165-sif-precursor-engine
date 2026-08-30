@@ -6,6 +6,33 @@ This README ties together the two data artifacts in this package and explains ex
 
 ---
 
+## ⭐ P0 DEMO (Phase 1 - Ready for Testing)
+
+A rule-based safety precursor analyzer is now available for testing:
+
+```bash
+cd sih26165-sif-precursor-engine
+pip install streamlit
+streamlit run src/streamlit_app.py
+```
+
+**Demo features:**
+- ✅ Detect C1–C6 root-cause classes in precursor text
+- ✅ Transparent SIF-potential assessment (rule-based, not ML)
+- ✅ Evidence linkage to OISD cases, patterns, standards
+- ✅ 3 predefined test cases from real training data
+- ✅ Provenance labels on all results (RULE_BASED, DETERMINISTIC_EXTRACTION)
+- ✅ JSON export for analysis results
+
+**See:** `BUILD_SPEC.md` (architecture), `DEMO_USAGE.md` (user guide), `BUILD_SUMMARY.md` (what was built)
+
+**Status:** ✅ Complete; ready for HSE supervisor evaluation
+
+**Note:** This is a Phase 1 demo using rule-based detection (keyword matching + evidence extraction). 
+No ML model is trained yet. Phase 2 will add fine-tuned transformer after collecting field-report samples.
+
+---
+
 ## 1. Files in this package
 
 | File | What it is | Rows/Entries |
