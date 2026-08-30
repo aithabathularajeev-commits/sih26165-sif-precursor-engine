@@ -71,3 +71,5 @@ build/
 
 # ===== Streamlit / demo app caches =====
 .streamlit/
+# ===== Generated analysis outputs =====
+outputs/
