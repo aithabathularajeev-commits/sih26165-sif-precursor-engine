@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-08-30T18:26:03.569069",
+  "n_samples": 75,
+  "n_cases": 12,
+  "n_classes": 6,
+  "classes": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "vocab_size": 500,
+  "tfidf_params": {
+    "max_features": 500,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 1,
+    "max_df": 0.95
+  },
+  "classifier_type": "OneVsRest(LogisticRegression)",
+  "class_weight": "balanced"
+}
